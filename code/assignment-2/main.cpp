@@ -35,8 +35,9 @@ int main() {
     // Range-based loop
     for (int h : hours) {
         dist = h * SPEED;
-        std::cout << "In " << h << " hours at " << SPEED << " mph, the car will travel " << dist << " miles."
-                  << std::endl;
+//        std::cout << "In " << h << " hours at " << SPEED << " mph, the car will travel " << dist << " miles."
+//                  << std::endl;
+        printf("\nAfter %d hours at %d mph, the car would have travelled %d miles", h, SPEED, dist );
     }
 
     return 0;
