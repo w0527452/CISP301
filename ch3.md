@@ -83,3 +83,15 @@ Its scope begins and ends with the module in which it was created.  The variable
 * It's not always easy to tell where they are defined and what their expected value is.
 * Any code anywhere can change the value of a global variable.
 
+\pagebreak
+## Algorithm Workbench
+
+1\. Design a module named timesTen. The module should accept an Integer argument. When the module is called, it should display the product of its argument multiplied times 10.
+
+	Module timesTen(Integer n)
+	  Declare Integer res
+	  Set res = n * 10
+	  Display res
+	End Module
+
+
