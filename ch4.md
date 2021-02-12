@@ -50,6 +50,9 @@
 
   AND.  As in IF x < 20 AND x > 10
 
+7\. What is a flag and how does it work?
+
+  A variable that signals when a condtion exists.  It's usually set to false until the condition exists.
 
 ## Algorithm Workbench #6
 
@@ -68,7 +71,13 @@ Else
   Display "Not good with numbers, eh?"
 End If
 ```
+
 ==========================================
+
+
+Continued on next page...
+
+\pagebreak
 
 ```
 std::string output;
@@ -89,6 +98,7 @@ switch(selection) {
 	default:
 	  output = "Not good with numbers, eh?";
 }
+
 std::cout << output << std::endl;
 ```
 
