@@ -24,8 +24,20 @@ Enter rainfall for October: 4
 Enter rainfall for November: .78
 Enter rainfall for December: 1.5
 
-There was a total of 87.38 inches of rain ranging from a low of 0.78 to a high of 21.40 with an average of 7.28
+There was a total of 87.38 inches of rain ranging from a low of 0.78 in November to a high of 21.40 in April with an average of 7.28
  */
+
+/**
+ * Return month name for given month number
+ * @param m
+ * @return
+ */
+std::string getMonth(int m) {
+    std::string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September",
+                              "October", "November", "December"};
+
+    return months[m];
+}
 
 /**
  * Calculate total, min, max and average values from given array
@@ -38,7 +50,9 @@ std::string getYearRange(double rainfall[]) {
             max = rainfall[0],
             total = 0,
             avg;
-    std::string output;
+    std::string output,
+            minMonth = getMonth(0),
+            maxMonth = getMonth(0);
 
     for (int i = 0; i < 12; i++) {
         // add to total
@@ -46,9 +60,15 @@ std::string getYearRange(double rainfall[]) {
 
         // compare to min and max values
         if (rainfall[i] < min) {
+            // set min amount
             min = rainfall[i];
+            // set min  month name
+            minMonth = getMonth(i);
         } else if (rainfall[i] > max) {
+            // set max amount
             max = rainfall[i];
+            // set max month name
+            maxMonth = getMonth(i);
         }
     }
     // calculate average
@@ -57,24 +77,14 @@ std::string getYearRange(double rainfall[]) {
     // Build string to return to main()
 //    https://stackoverflow.com/a/10219267
     std::ostringstream oss;
+    // make sure we only use 2 decimal places
     oss << std::fixed << std::setprecision(2);
-    oss << "There was a total of " << total << " inches of rain ranging from a low of " << min << " to a high of "
-        << max << " with an average of " << avg;
+    oss << "There was a total of " << total << " inches of rain ranging from a low of " << min << " in " << minMonth
+        << " to a high of " << max << " in " << maxMonth << " with an average of " << avg;
+
     output = oss.str();
 
     return output;
-}
-
-/**
- * Return month name for given month number
- * @param m
- * @return
- */
-std::string getMonth(int m) {
-    std::string months[12] = {"January", "February", "March", "April", "May", "June", "July", "August", "September",
-                              "October", "November", "December"};
-
-    return months[m];
 }
 
 /**
