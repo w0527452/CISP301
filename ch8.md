@@ -22,15 +22,13 @@ False
 
 True
 
-\pagebreak
-
 ## Short Answer
 
-1\. What is an off-by-one error?
+### 1\. What is an off-by-one error?
 
 An error iterating one too many or one too few times when looping through an array.
 
-2\. Look at the following pseudocode:
+### 2\. Look at the following pseudocode:
 
 ```
 Constant Integer SIZE = 10
@@ -49,7 +47,9 @@ c\. What is the subscript of the last element in the array?
 
 9
 
-3\. Look at the following pseudocode:
+\pagebreak
+
+### 3\. Look at the following pseudocode:
 
 ```
 Constant Integer SIZE = 3
@@ -64,13 +64,13 @@ b\. What value is stored in numbers[0]?
 
 1
 
-4\. A program uses two parallel arrays named customerNumbers and balances. The customerNumbers array holds customer numbers and the balances array holds customer account balances. If a particular customer’s customer number is stored in customerNumbers[187], where would that customer’s account balance be stored?
+### 4\. A program uses two parallel arrays named customerNumbers and balances. The customerNumbers array holds customer numbers and the balances array holds customer account balances. If a particular customer’s customer number is stored in customerNumbers[187], where would that customer’s account balance be stored?
 
 ```
 balances[187]
 ```
 
-5\. Look at the following pseudocode array declaration:
+### 5\. Look at the following pseudocode array declaration:
 
 ```
 Declare Real sales[8][10]
@@ -83,8 +83,6 @@ a\. How many rows does the array have?
 b\. How many columns does the array have?
 
 10
-
-\pagebreak
 
 c\. How many elements does the array have?
 
