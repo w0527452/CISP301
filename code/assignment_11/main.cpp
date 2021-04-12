@@ -32,7 +32,7 @@ std::string circle() {
             break;
         }
     }
-    area = radius * PIE;
+    area = radius * radius * PIE;
     std::ostringstream areaString;
     areaString << "The area of a circle with radius " << radius << " is " << area << std::endl;
 
@@ -139,11 +139,12 @@ int main() {
     int areaSelect;
 
     do {
-        std::cout << "Mak a selection" << std::endl;
+        std::cout << "\t\tGeometry Calculator" << std::endl;
         std::cout << "1. Area of a circle" << std::endl;
         std::cout << "2. Area of a rectangle" << std::endl;
         std::cout << "3. Area of a triangle" << std::endl;
-        std::cout << "Select 0 to exit" << std::endl;
+        std::cout << "4. Quit" << std::endl;
+        std::cout << "Enter your choice (1-4)" << std::endl;
         std::cout << std::endl;
 
         std::cin >> areaSelect;
@@ -169,7 +170,7 @@ int main() {
             case 3:
                 response = triangle();
                 break;
-            case 0:
+            case 4:
                 response = "Goodbye";
                 break;
             default:
@@ -178,7 +179,7 @@ int main() {
 
         std::cout << response << std::endl;
 
-    } while (0 != areaSelect);
+    } while (4 != areaSelect);
 
     return 0;
 }
