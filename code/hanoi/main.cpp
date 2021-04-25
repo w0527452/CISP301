@@ -8,17 +8,19 @@
  * @param tmpPeg
  */
 void hanoi(int n, std::string startPeg, std::string endPeg, std::string tmpPeg) {
-    if (1 == n) {
-        std::cout << "Move disc 1 from peg " << startPeg << " to peg " << endPeg << std::endl;
-        return;
+    static unsigned int count = 0;
+    if (n > 0) {
+        // Move first n-1 discs from start peg to temp peg using end peg as temp
+        hanoi(n - 1, startPeg, tmpPeg, endPeg);
+        std::cout << ++count << ". Move disc " << n << " from peg " << startPeg << " to peg " << endPeg << std::endl;
+        // Move n-1 discs from tmp peg to end peg using start peg as temp
+        hanoi(n - 1, tmpPeg, endPeg, startPeg);
     }
-    hanoi(n - 1, startPeg, tmpPeg, endPeg);
-    std::cout << "Move disc " << n << " from peg " << startPeg << " to peg " << endPeg << std::endl;
-    hanoi(n - 1, tmpPeg, endPeg, startPeg);
+
 }
 
 int main() {
-    int n = 4; // number of discs
+    int n = 8; // number of discs
     hanoi(n, "1", "3", "2");
 
     return 0;
